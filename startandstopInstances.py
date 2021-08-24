@@ -1,5 +1,6 @@
 import boto3
 id=[]
+#hope it works
 def startandstopinstances(event, context):
     aws_console=boto3.session.Session(profile_name="serverless-admin")
     ec2_client=aws_console.client(service_name="ec2",region_name="ap-south-1")
