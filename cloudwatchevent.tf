@@ -11,7 +11,7 @@ resource "aws_cloudwatch_event_target" "ec2instancestarget"{
 }
 
 resource "aws_lambda_permission" "allow_cloudwatch"{
-    atatementid          = "allowexecutionfromcloudwatchevent"
+    statementid          = "allowexecutionfromcloudwatchevent"
     action               = "lambda.InvokeFunction"
     function_name        = "aws_lambda_function.startandstop.function_name"
     principal            = "events.amazonaws.com"
