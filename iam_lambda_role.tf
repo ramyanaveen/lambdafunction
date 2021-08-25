@@ -1,7 +1,7 @@
 resource "aws_iam_role_policy" "lambda_policy" {
   name = "lambda_policy"
   role = aws_iam_role.lambda_role.id
-  policy = "${file("iam/iam_role_policy.json")}"
+  policy = "${file(iam/iam_role_policy.json)}"
 
   # Terraform's "jsonencode" function converts a
   # Terraform expression result to valid JSON syntax.
