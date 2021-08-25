@@ -5,7 +5,7 @@ resource "aws_cloudwatch_event_rule" "tostartinstances"{
 }
 
 resource "aws_cloudwatch_event_target" "ec2instancestarget"{
-    rule                 = "aws_cloudwatch_event_rule.tostartinstances.name"
+    rule                 = aws_cloudwatch_event_rule.tostartinstances.name
     target_id            = "startstoppedinstances"
     arn                  = aws_lambda_function.startandstop.arn
 }
